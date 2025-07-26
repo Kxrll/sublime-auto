@@ -191,7 +191,7 @@ body {
     background: transparent;
     color: var(--text-medium);
     padding: 12px 24px;
-    border: 2px solid var(--border-light);
+    border: 2px solid var(--border-dark);
     border-radius: 8px;
     text-decoration: none;
     font-weight: 500;
@@ -201,6 +201,8 @@ body {
 .btn-secondary:hover {
     border-color: var(--gold-accent);
     color: var(--gold-accent);
+    background: var(--gold-accent);
+    color: var(--pure-white);
 }
 
 /* About Section */
@@ -349,8 +351,8 @@ body {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    background: rgba(0, 0, 0, 0.9);
-    color: var(--pure-white);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-black);
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
     font-size: 0.8rem;
@@ -359,10 +361,12 @@ body {
 
 .vehicle-type.vente {
     background: #28a745;
+    color: var(--pure-white);
 }
 
 .vehicle-type.location {
     background: #007bff;
+    color: var(--pure-white);
 }
 
 .vehicle-info {
@@ -682,8 +686,8 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--primary-black);
-    color: var(--pure-white);
+    background: var(--off-white);
+    color: var(--text-dark);
     padding: 3rem 0 1rem;
     border-top: 1px solid var(--border-light);
 }
@@ -699,7 +703,7 @@ body {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--gold-accent);
+    color: var(--primary-black);
 }
 
 .footer-brand {
@@ -716,21 +720,21 @@ body {
 }
 
 .footer-description {
-    color: var(--text-light);
+    color: var(--text-medium);
     line-height: 1.6;
 }
 
 .contact-info p,
 .availability p {
     margin-bottom: 0.5rem;
-    color: var(--text-light);
+    color: var(--text-medium);
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
 .contact-info i {
-    color: var(--gold-accent);
+    color: var(--primary-black);
     width: 16px;
 }
 
@@ -745,8 +749,8 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: var(--secondary-black);
-    color: var(--pure-white);
+    background: var(--pure-white);
+    color: var(--primary-black);
     border-radius: 50%;
     text-decoration: none;
     transition: var(--transition);
@@ -763,7 +767,7 @@ body {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid var(--border-light);
-    color: var(--text-light);
+    color: var(--text-medium);
 }
 
 /* Animations */

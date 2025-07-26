@@ -836,6 +836,67 @@ body {
         gap: 2rem;
     }
 
+    /* Optimisations spécifiques pour les détails de véhicule sur mobile */
+    .car-details {
+        padding: 100px 15px 60px;
+    }
+
+    .car-details-grid {
+        gap: 2rem;
+    }
+
+    .car-info h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .car-price {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .car-specs-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .spec-item {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .gallery-main img {
+        height: 250px;
+    }
+
+    .gallery-nav {
+        width: 35px;
+        height: 35px;
+    }
+
+    .gallery-prev {
+        left: 0.5rem;
+    }
+
+    .gallery-next {
+        right: 0.5rem;
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 45px;
+    }
+
+    .car-actions {
+        flex-direction: column;
+    }
+
+    .btn-call {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+
     .vehicles-grid {
         grid-template-columns: 1fr;
     }
@@ -877,6 +938,44 @@ body {
 
     .car-specs-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Optimisations supplémentaires pour très petits écrans */
+    .car-details {
+        padding: 90px 10px 50px;
+    }
+
+    .car-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .car-price {
+        font-size: 1.3rem;
+    }
+
+    .gallery-main img {
+        height: 200px;
+    }
+
+    .gallery-nav {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    .thumbnail {
+        width: 50px;
+        height: 40px;
+    }
+
+    .spec-item {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .btn-call {
+        padding: 10px 16px;
+        font-size: 0.85rem;
     }
 }
 

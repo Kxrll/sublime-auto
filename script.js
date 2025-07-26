@@ -1,15 +1,15 @@
 // Données des véhicules
 const vehicles = [
   // Citroen C3 - Vente
-  {
-    id: 1,
+    {
+        id: 1,
     brand: "Citroen",
     model: "C3",
     year: "",
     mileage: "",
     price: "",
     type: "vente", // vente ou location
-    images: [
+        images: [
       "img/citroen c3/852f897a-063b-4ce2-ae5f-ca3ae6b5501a.jpg",
       "img/citroen c3/4f077fa0-9a3a-40aa-b130-7ee82c6ace32.jpg",
       "img/citroen c3/e373a36e-e150-465e-9b18-6e1d33bad6a5.jpg",
@@ -25,15 +25,15 @@ const vehicles = [
     power: ""
   },
   // Citroen Grise - Location
-  {
-    id: 2,
+    {
+        id: 2,
     brand: "Citroen",
     model: "Grise",
     year: "",
     mileage: "",
     price: "",
     type: "location",
-    images: [
+        images: [
       "img/citroen grise/1c982f72-177e-45f3-8b5d-7bc0a54efb38.jpg",
       "img/citroen grise/7b94b013-c917-4262-8a41-738c90215ad0.jpg",
       "img/citroen grise/152b5f6e-ddee-4e52-b49a-466b01e0d698.jpg",
@@ -49,15 +49,15 @@ const vehicles = [
     power: ""
   },
   // Citroen Jaune - Vente
-  {
-    id: 3,
+    {
+        id: 3,
     brand: "Citroen",
     model: "Jaune",
     year: "",
     mileage: "",
     price: "",
     type: "vente",
-    images: [
+        images: [
       "img/citroen jaune/c14b912a-3db8-4bbd-8e9a-bc8c215f7892.jpg",
       "img/citroen jaune/de44b689-5383-405e-8992-007ed22fe636.jpg",
       "img/citroen jaune/15fb2005-7537-4574-b0f5-4fd338cd502b.jpg",
@@ -73,15 +73,15 @@ const vehicles = [
     power: ""
   },
   // Citroen Noir - Location
-  {
-    id: 4,
+    {
+        id: 4,
     brand: "Citroen",
     model: "Noir",
     year: "",
     mileage: "",
     price: "",
     type: "location",
-    images: [
+        images: [
       "img/citroen noir/826a402f-6f9c-4c7a-98d5-3eb0e746be90.jpg",
       "img/citroen noir/049f36c0-84f5-4189-a384-2e540d963b19.jpg",
       "img/citroen noir/6b17bff5-6e40-4d4f-912a-d36737ceeb66.jpg",
@@ -98,15 +98,15 @@ const vehicles = [
     power: ""
   },
   // Ford Camion - Vente
-  {
-    id: 5,
+    {
+        id: 5,
     brand: "Ford",
     model: "Camion",
     year: "",
     mileage: "",
     price: "",
     type: "vente",
-    images: [
+        images: [
       "img/ford camion/f76bffc8-c649-434a-b7d9-0b5ae2ae5137.jpg",
       "img/ford camion/680406eb-fa36-4095-a4f7-dde2b323f729.jpg",
       "img/ford camion/adaeb3c8-2dfa-4d3a-ac15-912b4cf136b0.jpg",
@@ -123,8 +123,8 @@ const vehicles = [
     power: ""
   },
   // Opel - Location
-  {
-    id: 6,
+    {
+        id: 6,
     brand: "Opel",
     model: "",
     year: "",
@@ -519,7 +519,7 @@ const vehicles = [
     mileage: "",
     price: "",
     type: "vente",
-    images: [
+        images: [
       "img/telsa/cfc45132-a11c-444d-a3e5-fc9624a384b5.jpg",
       "img/telsa/71a4555d-509f-4630-ab33-337fd03fbfb3.jpg",
       "img/telsa/d6cb5f36-f56a-40cc-b4f6-5420b667cad4.jpg",
@@ -534,7 +534,7 @@ const vehicles = [
     transmission: "",
     doors: "",
     power: ""
-  }
+    }
 ];
 
 // Variables globales
@@ -570,14 +570,10 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeNavigation() {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
-    const navOverlay = document.getElementById('nav-overlay');
     
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-            if (navOverlay) {
-                navOverlay.classList.toggle('active');
-            }
             
             // Changer l'icône
             const icon = navToggle.querySelector('i');
@@ -588,24 +584,39 @@ function initializeNavigation() {
             }
         });
         
-        // Fermer le menu en cliquant sur l'overlay
-        if (navOverlay) {
-            navOverlay.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                navOverlay.classList.remove('active');
-                navToggle.querySelector('i').className = 'fas fa-bars';
-            });
-        }
-        
         // Fermer le menu lors du clic sur un lien
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Permettre la navigation normale
+                const href = this.getAttribute('href');
+                
+                // Fermer le menu pour tous les liens
                 navMenu.classList.remove('active');
-                if (navOverlay) {
-                    navOverlay.classList.remove('active');
-                }
                 navToggle.querySelector('i').className = 'fas fa-bars';
+                
+                // Si c'est un lien vers la même page (ancre), faire défiler en douceur
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+                // Si c'est un lien vers une autre page, la navigation se fera normalement
             });
+        });
+        
+        // Fermer le menu avec la touche Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                navToggle.querySelector('i').className = 'fas fa-bars';
+            }
         });
     }
 }

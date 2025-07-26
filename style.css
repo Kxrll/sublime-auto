@@ -798,46 +798,46 @@ body {
     .nav-menu {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: -280px;
         width: 280px;
         height: 100vh;
         background: var(--pure-white);
         flex-direction: column;
         padding: 2rem;
         box-shadow: var(--shadow-medium);
-        opacity: 1;
-        visibility: hidden;
         transition: var(--transition);
         border-left: 1px solid var(--border-light);
-        z-index: 1001;
+        z-index: 1000;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .nav-menu .nav-link {
+        width: 100%;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border-light);
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--text-dark);
+        text-decoration: none;
+        display: block;
+    }
+
+    .nav-menu .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu .nav-link:hover {
+        color: var(--gold-accent);
     }
 
     .nav-menu.active {
         right: 0;
-        visibility: visible;
     }
 
     .nav-toggle {
         display: block;
-    }
-
-    /* Overlay pour le menu mobile */
-    .nav-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition);
-        z-index: 1000;
-    }
-
-    .nav-overlay.active {
-        opacity: 1;
-        visibility: visible;
     }
 
     .hero {

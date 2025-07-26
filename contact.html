@@ -13,12 +13,15 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <img src="public/logo.jpg" alt="Sublime's Auto Logo" class="brand-logo">
-                <span class="brand-text">Sublime's Auto</span>
+                <a href="index.html" class="brand-link">
+                    <img src="public/logo.jpg" alt="Sublime's Auto Logo" class="brand-logo">
+                    <span class="brand-text">Sublime's Auto</span>
+                </a>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Accueil</a>
                 <a href="index.html#vehicules" class="nav-link">Véhicules</a>
+                <a href="about.html" class="nav-link">À propos</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
@@ -30,80 +33,40 @@
     <!-- Contact Section -->
     <section class="contact-page">
         <div class="container">
-            <h1 class="page-title">Contactez-nous</h1>
-            <p class="page-subtitle">Notre équipe est à votre disposition pour répondre à toutes vos questions.</p>
+            <h1 class="page-title">Contact</h1>
+            <p class="page-subtitle">Nous sommes là pour vous accompagner dans votre projet d'achat ou location de véhicule.</p>
             
             <div class="contact-content">
                 <div class="contact-info-section">
                     <h2>Informations Pratiques</h2>
-                    
                     <div class="contact-card">
                         <div class="contact-item">
                             <i class="fas fa-phone contact-icon"></i>
                             <div>
                                 <h3>Téléphone</h3>
                                 <p><a href="tel:+33123456789">01 23 45 67 89</a></p>
+                                <p class="contact-note">Appelez-nous pour toute question ou prise de rendez-vous</p>
                             </div>
                         </div>
-                        
                         <div class="contact-item">
                             <i class="fas fa-envelope contact-icon"></i>
                             <div>
                                 <h3>Email</h3>
-                                <p><a href="mailto:sublimesauto@gmail.com">sublimesauto@gmail.com</a></p>
+                                <p><a href="mailto:Sublimesauto91@gmail.com">Sublimesauto91@gmail.com</a></p>
+                                <p class="contact-note">Réponse rapide garantie sous 24h</p>
                             </div>
                         </div>
-                        
+
                         <div class="contact-item">
-                            <i class="fas fa-clock contact-icon"></i>
+                            <i class="fas fa-car contact-icon"></i>
                             <div>
-                                <h3>Disponibilité</h3>
-                                <p>Contactez-nous pour convenir<br>
-                                   d'un rendez-vous selon<br>
-                                   vos disponibilités</p>
+                                <h3>Nos services</h3>
+                                <p><strong>Vente</strong> de véhicules d'occasion contrôlés</p>
+                                <p><strong>Location</strong> courte et longue durée</p>
+                                <p class="contact-note">Expertise et garantie incluses</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="contact-form-section">
-                    <h2>Envoyez-nous un message</h2>
-                    
-                    <form class="contact-form" id="contact-form" action="https://getform.io/f/aronvdob" method="POST">
-                        <div class="form-group">
-                            <label for="name">Nom complet *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Sujet *</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Sélectionnez un sujet</option>
-                                <option value="information">Demande d'information</option>
-                                <option value="rdv">Prise de rendez-vous</option>
-                                <option value="vehicule">Question sur un véhicule</option>
-                                <option value="service">Service après-vente</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre demande en détail..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary">Envoyer le message</button>
-                    </form>
                 </div>
             </div>
         </div>
@@ -118,13 +81,13 @@
                         <img src="public/logo.jpg" alt="Sublime's Auto Logo" class="brand-logo">
                         <span class="brand-text">Sublime's Auto</span>
                     </div>
-                    <p class="footer-description">Votre partenaire de confiance pour l'achat de véhicules d'exception.</p>
+                                           <p class="footer-description">Votre partenaire de confiance pour des véhicules contrôlés et prêts à rouler.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <div class="contact-info">
                         <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
-                        <p><i class="fas fa-envelope"></i> sublimesauto@gmail.com</p>
+                        <p><i class="fas fa-envelope"></i> Sublimesauto91@gmail.com</p>
                     </div>
                 </div>
                 <div class="footer-section">

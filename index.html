@@ -13,12 +13,15 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <img src="public/logo.jpg" alt="Sublime's Auto Logo" class="brand-logo">
-                <span class="brand-text">Sublime's Auto</span>
+                <a href="index.html" class="brand-link">
+                    <img src="public/logo.jpg" alt="Sublime's Auto Logo" class="brand-logo">
+                    <span class="brand-text">Sublime's Auto</span>
+                </a>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#accueil" class="nav-link active">Accueil</a>
                 <a href="#vehicules" class="nav-link">Véhicules</a>
+                <a href="about.html" class="nav-link">À propos</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
@@ -83,11 +86,28 @@
     <section id="vehicules" class="vehicles">
         <div class="container">
             <h2 class="section-title">Nos Véhicules Disponibles</h2>
-            <div class="vehicles-filter">
-                <button class="filter-btn active" data-filter="all">Tous les véhicules</button>
-                <button class="filter-btn" data-filter="vente">Vente</button>
-                <button class="filter-btn" data-filter="location">Location</button>
-            </div>
+                           <div class="vehicles-filter">
+                   <div class="filter-section">
+                       <h3>Type de transaction</h3>
+                       <div class="filter-buttons">
+                           <button class="filter-btn active" data-filter="all">Tous les véhicules</button>
+                           <button class="filter-btn" data-filter="vente">Vente</button>
+                           <button class="filter-btn" data-filter="location">Location</button>
+                       </div>
+                   </div>
+                   <div class="filter-section">
+                       <h3>Marques</h3>
+                       <div class="filter-buttons">
+                           <button class="filter-btn" data-filter="all-brands">Toutes les marques</button>
+                           <button class="filter-btn" data-filter="citroen">Citroën</button>
+                           <button class="filter-btn" data-filter="peugeot">Peugeot</button>
+                           <button class="filter-btn" data-filter="renault">Renault</button>
+                           <button class="filter-btn" data-filter="ford">Ford</button>
+                           <button class="filter-btn" data-filter="opel">Opel</button>
+                           <button class="filter-btn" data-filter="tesla">Tesla</button>
+                       </div>
+                   </div>
+               </div>
             <div class="vehicles-grid" id="vehicles-grid">
                 <!-- Les véhicules seront ajoutés via JavaScript -->
             </div>
@@ -103,13 +123,13 @@
                         <img src="public/logo.jpg" alt="Sublime's Auto Logo" class="brand-logo">
                         <span class="brand-text">Sublime's Auto</span>
                     </div>
-                    <p class="footer-description">Votre partenaire de confiance pour l'achat de véhicules d'exception.</p>
+                                           <p class="footer-description">Votre partenaire de confiance pour des véhicules contrôlés et prêts à rouler.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <div class="contact-info">
                         <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
-                        <p><i class="fas fa-envelope"></i> sublimesauto@gmail.com</p>
+                                                   <p><i class="fas fa-envelope"></i> Sublimesauto91@gmail.com</p>
                     </div>
                 </div>
                 <div class="footer-section">

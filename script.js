@@ -411,10 +411,10 @@ const vehicles = [
     doors: "",
     power: ""
   },
-  // Renaut Blanche - Vente
+  // Renault Blanche - Vente
   {
     id: 18,
-    brand: "Renaut",
+    brand: "Renault",
     model: "Blanche",
     year: "",
     mileage: "",
@@ -428,17 +428,17 @@ const vehicles = [
       "img/renaut blanche/c43159fe-2cca-499c-86fc-0969830403db.jpg",
       "img/renaut blanche/287a81bd-860f-4079-aa9e-d8004644d2c7.jpg"
     ],
-    description: "Renaut blanche, voir toutes les photos pour plus de détails.",
+    description: "Renault blanche, voir toutes les photos pour plus de détails.",
     features: [],
     fuel: "",
     transmission: "",
     doors: "",
     power: ""
   },
-  // Renaut Camion - Location
+  // Renault Camion - Location
   {
     id: 19,
-    brand: "Renaut",
+    brand: "Renault",
     model: "Camion",
     year: "",
     mileage: "",
@@ -453,17 +453,17 @@ const vehicles = [
       "img/renaut camion/65bb90b3-c26d-4978-a1ca-e3dab962c0b1.jpg",
       "img/renaut camion/f8c7737e-9ad0-4624-95e3-010baa7e5878.jpg"
     ],
-    description: "Renaut camion, voir toutes les photos pour plus de détails.",
+    description: "Renault camion, voir toutes les photos pour plus de détails.",
     features: [],
     fuel: "",
     transmission: "",
     doors: "",
     power: ""
   },
-  // Renaut Camion FQ - Vente
+  // Renault Camion FQ - Vente
   {
     id: 20,
-    brand: "Renaut",
+    brand: "Renault",
     model: "Camion FQ",
     year: "",
     mileage: "",
@@ -478,7 +478,7 @@ const vehicles = [
       "img/renaut camion FQ/d8b5ff51-ee58-4d73-a9c9-7a1c82decff9.jpg",
       "img/renaut camion FQ/07e97c97-ef4b-49c1-96ef-154101be8ec7.jpg"
     ],
-    description: "Renaut camion FQ, voir toutes les photos pour plus de détails.",
+    description: "Renault camion FQ, voir toutes les photos pour plus de détails.",
     features: [],
     fuel: "",
     transmission: "",
@@ -540,7 +540,8 @@ const vehicles = [
 // Variables globales
 let currentImageIndex = 0;
 let currentVehicle = null;
-let currentFilter = 'all';
+let currentFilter = 'all'; // Filtre par type (vente/location)
+let currentBrandFilter = 'all-brands'; // Filtre par marque
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', function() {
@@ -627,16 +628,22 @@ function initializeFilterButtons() {
     
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Retirer la classe active de tous les boutons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+            const filterType = this.getAttribute('data-filter');
             
-            // Ajouter la classe active au bouton cliqué
-            this.classList.add('active');
+            // Déterminer le type de filtre (type de transaction ou marque)
+            if (filterType === 'all' || filterType === 'vente' || filterType === 'location') {
+                // Filtre par type de transaction
+                document.querySelectorAll('.filter-buttons:first-child .filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = filterType;
+            } else {
+                // Filtre par marque
+                document.querySelectorAll('.filter-buttons:last-child .filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                currentBrandFilter = filterType;
+            }
             
-            // Mettre à jour le filtre actuel
-            currentFilter = this.getAttribute('data-filter');
-            
-            // Recharger les véhicules avec le filtre
+            // Recharger les véhicules avec les filtres
             loadVehicles();
         });
     });
@@ -649,10 +656,19 @@ function loadVehicles() {
     
     vehiclesGrid.innerHTML = '';
     
-    // Filtrer les véhicules selon le filtre actuel
+    // Filtrer les véhicules selon les filtres actuels
     let filteredVehicles = vehicles;
+    
+    // Filtre par type de transaction
     if (currentFilter !== 'all') {
-        filteredVehicles = vehicles.filter(vehicle => vehicle.type === currentFilter);
+        filteredVehicles = filteredVehicles.filter(vehicle => vehicle.type === currentFilter);
+    }
+    
+    // Filtre par marque
+    if (currentBrandFilter !== 'all-brands') {
+        filteredVehicles = filteredVehicles.filter(vehicle => 
+            vehicle.brand.toLowerCase() === currentBrandFilter.toLowerCase()
+        );
     }
     
     filteredVehicles.forEach(vehicle => {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails du véhicule - Sublime's Auto</title>
+    <title>À propos - Sublime's Auto</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -21,7 +21,7 @@
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Accueil</a>
                 <a href="index.html#vehicules" class="nav-link">Véhicules</a>
-                <a href="about.html" class="nav-link">À propos</a>
+                <a href="about.html" class="nav-link active">À propos</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
@@ -30,17 +30,34 @@
         </nav>
     </header>
 
-    <!-- Car Details Section -->
-    <section class="car-details">
+    <!-- About Section -->
+    <section class="about-page">
         <div class="container">
-            <div class="back-button">
-                <a href="index.html#vehicules" class="btn-secondary">
-                    <i class="fas fa-arrow-left"></i> Retour aux véhicules
-                </a>
-            </div>
+            <h1 class="page-title">À propos de Sublime's Auto</h1>
+            <p class="page-subtitle">Découvrez notre histoire et notre engagement</p>
             
-            <div class="car-details-content" id="car-details-content">
-                <!-- Le contenu sera généré par JavaScript -->
+            <div class="about-content">
+                <div class="about-text-section">
+                    <div class="about-paragraph">
+                        <p>Sublime's Auto est spécialisée dans la vente et la location de véhicules, adaptés à tous les budgets et à tous les besoins.</p>
+                    </div>
+                    
+                    <div class="about-paragraph">
+                        <p>Notre équipe commerciale vous accueille chaleureusement dans notre showroom pour vous faire découvrir notre large sélection de véhicules disponibles.</p>
+                    </div>
+                    
+                    <div class="about-paragraph">
+                        <p>Notre force : un accompagnement personnalisé tout au long de votre projet, ainsi qu'une sélection rigoureuse de partenaires de confiance pour vous garantir des véhicules de qualité au meilleur prix.</p>
+                    </div>
+                    
+                    <div class="about-paragraph">
+                        <p>Pour des raisons de sécurité, de confidentialité et de qualité de service, l'équipe nous accueille uniquement sur rendez-vous.</p>
+                    </div>
+                    
+                    <div class="about-cta">
+                        <a href="contact.html" class="btn-primary">Contactez-nous</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -54,7 +71,7 @@
                         <img src="public/logo.jpg" alt="Sublime's Auto Logo" class="brand-logo">
                         <span class="brand-text">Sublime's Auto</span>
                     </div>
-                                           <p class="footer-description">Votre partenaire de confiance pour des véhicules contrôlés et prêts à rouler.</p>
+                    <p class="footer-description">Votre partenaire de confiance pour des véhicules contrôlés et prêts à rouler.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
@@ -79,4 +96,4 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+</html> 

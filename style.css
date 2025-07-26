@@ -797,28 +797,47 @@ body {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        top: 100%;
-        left: 0;
-        right: 0;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
         background: var(--pure-white);
         flex-direction: column;
         padding: 2rem;
         box-shadow: var(--shadow-medium);
-        transform: translateY(-100%);
-        opacity: 0;
+        opacity: 1;
         visibility: hidden;
         transition: var(--transition);
-        border-top: 1px solid var(--border-light);
+        border-left: 1px solid var(--border-light);
+        z-index: 1001;
     }
 
     .nav-menu.active {
-        transform: translateY(0);
-        opacity: 1;
+        right: 0;
         visibility: visible;
     }
 
     .nav-toggle {
         display: block;
+    }
+
+    /* Overlay pour le menu mobile */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+        z-index: 1000;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
     }
 
     .hero {

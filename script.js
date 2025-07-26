@@ -570,10 +570,14 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeNavigation() {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const navOverlay = document.getElementById('nav-overlay');
     
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            if (navOverlay) {
+                navOverlay.classList.toggle('active');
+            }
             
             // Changer l'icône
             const icon = navToggle.querySelector('i');
@@ -584,10 +588,22 @@ function initializeNavigation() {
             }
         });
         
+        // Fermer le menu en cliquant sur l'overlay
+        if (navOverlay) {
+            navOverlay.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                navOverlay.classList.remove('active');
+                navToggle.querySelector('i').className = 'fas fa-bars';
+            });
+        }
+        
         // Fermer le menu lors du clic sur un lien
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
+                if (navOverlay) {
+                    navOverlay.classList.remove('active');
+                }
                 navToggle.querySelector('i').className = 'fas fa-bars';
             });
         });

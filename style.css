@@ -6,22 +6,21 @@
 }
 
 :root {
-    --primary-black: #000000;
-    --secondary-black: #111111;
-    --dark-gray: #1a1a1a;
-    --medium-gray: #2a2a2a;
-    --light-gray: #333333;
+    --primary-black: #1a1a1a;
+    --secondary-black: #2a2a2a;
     --pure-white: #ffffff;
-    --off-white: #e0e0e0;
+    --off-white: #f8f9fa;
+    --light-gray: #e9ecef;
+    --medium-gray: #dee2e6;
     --gold-accent: #d4af37;
     --gold-light: #e6c866;
-    --text-light: #aaaaaa;
-    --text-medium: #cccccc;
-    --text-dark: #ffffff;
-    --border-light: #444444;
-    --border-dark: #555555;
-    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.4);
-    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --text-light: #6c757d;
+    --text-medium: #495057;
+    --text-dark: #212529;
+    --border-light: #dee2e6;
+    --border-dark: #adb5bd;
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
     --transition: all 0.3s ease;
 }
 
@@ -29,7 +28,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-medium);
-    background-color: var(--primary-black);
+    background-color: var(--pure-white);
 }
 
 .container {
@@ -44,7 +43,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid var(--border-light);
@@ -64,7 +63,7 @@ body {
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-black);
     font-size: 1.5rem;
 }
 
@@ -111,7 +110,7 @@ body {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
-    color: var(--text-dark);
+    color: var(--primary-black);
 }
 
 /* Hero Section */
@@ -124,7 +123,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     min-height: 80vh;
-    background: var(--primary-black);
+    background: var(--pure-white);
 }
 
 .hero-content {
@@ -134,7 +133,7 @@ body {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-black);
     margin-bottom: 1rem;
     line-height: 1.2;
 }
@@ -170,7 +169,7 @@ body {
 .btn-primary {
     display: inline-block;
     background: var(--gold-accent);
-    color: var(--primary-black);
+    color: var(--pure-white);
     padding: 14px 30px;
     border-radius: 8px;
     text-decoration: none;
@@ -207,7 +206,7 @@ body {
 /* About Section */
 .about {
     padding: 80px 20px;
-    background: var(--secondary-black);
+    background: var(--off-white);
 }
 
 .about-content {
@@ -220,7 +219,7 @@ body {
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-black);
     margin-bottom: 2rem;
     line-height: 1.2;
 }
@@ -256,7 +255,7 @@ body {
 .feature h3 {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--primary-black);
     margin-bottom: 0.5rem;
 }
 
@@ -267,7 +266,7 @@ body {
 /* Vehicles Section */
 .vehicles {
     padding: 80px 20px;
-    background: var(--primary-black);
+    background: var(--pure-white);
 }
 
 .vehicles-filter {
@@ -291,7 +290,7 @@ body {
 .filter-btn:hover,
 .filter-btn.active {
     background: var(--gold-accent);
-    color: var(--primary-black);
+    color: var(--pure-white);
 }
 
 .vehicles-grid {
@@ -302,7 +301,7 @@ body {
 }
 
 .vehicle-card {
-    background: var(--dark-gray);
+    background: var(--pure-white);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow-light);
@@ -315,7 +314,6 @@ body {
 .vehicle-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-medium);
-    border-color: var(--gold-accent);
 }
 
 .vehicle-image {
@@ -340,7 +338,7 @@ body {
     top: 1rem;
     right: 1rem;
     background: var(--gold-accent);
-    color: var(--primary-black);
+    color: var(--pure-white);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-weight: 600;
@@ -374,7 +372,7 @@ body {
 .vehicle-title {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--primary-black);
     margin-bottom: 0.5rem;
 }
 
@@ -401,7 +399,7 @@ body {
 /* Car Details Page */
 .car-details {
     padding: 120px 20px 80px;
-    background: var(--primary-black);
+    background: var(--pure-white);
 }
 
 .back-button {
@@ -435,7 +433,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border: none;
     width: 40px;
     height: 40px;
@@ -445,12 +443,12 @@ body {
     align-items: center;
     justify-content: center;
     transition: var(--transition);
-    color: var(--text-dark);
+    color: var(--primary-black);
 }
 
 .gallery-nav:hover {
     background: var(--gold-accent);
-    color: var(--primary-black);
+    color: var(--pure-white);
 }
 
 .gallery-prev {
@@ -487,7 +485,7 @@ body {
 .car-info h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-black);
     margin-bottom: 1rem;
 }
 
@@ -509,7 +507,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0.75rem;
-    background: var(--dark-gray);
+    background: var(--off-white);
     border-radius: 6px;
     border: 1px solid var(--border-light);
 }
@@ -521,7 +519,7 @@ body {
 
 .spec-value {
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--primary-black);
 }
 
 .car-description {
@@ -531,7 +529,7 @@ body {
 .car-description h3 {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--primary-black);
     margin-bottom: 1rem;
 }
 
@@ -566,13 +564,13 @@ body {
 /* Contact Page */
 .contact-page {
     padding: 120px 20px 80px;
-    background: var(--primary-black);
+    background: var(--pure-white);
 }
 
 .page-title {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--primary-black);
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -591,7 +589,7 @@ body {
 }
 
 .contact-card {
-    background: var(--dark-gray);
+    background: var(--pure-white);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow-light);
@@ -617,7 +615,7 @@ body {
 .contact-item h3 {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--primary-black);
     margin-bottom: 0.5rem;
 }
 
@@ -637,7 +635,7 @@ body {
 }
 
 .contact-form {
-    background: var(--dark-gray);
+    background: var(--pure-white);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow-light);
@@ -651,7 +649,7 @@ body {
 .form-group label {
     display: block;
     font-weight: 500;
-    color: var(--text-dark);
+    color: var(--primary-black);
     margin-bottom: 0.5rem;
 }
 
@@ -665,7 +663,7 @@ body {
     font-family: inherit;
     font-size: 1rem;
     transition: var(--transition);
-    background: var(--medium-gray);
+    background: var(--pure-white);
     color: var(--text-dark);
 }
 
@@ -674,7 +672,7 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--gold-accent);
-    background: var(--light-gray);
+    background: var(--pure-white);
 }
 
 .form-group textarea {
@@ -685,7 +683,7 @@ body {
 /* Footer */
 .footer {
     background: var(--primary-black);
-    color: var(--text-dark);
+    color: var(--pure-white);
     padding: 3rem 0 1rem;
     border-top: 1px solid var(--border-light);
 }
@@ -747,8 +745,8 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: var(--medium-gray);
-    color: var(--text-dark);
+    background: var(--secondary-black);
+    color: var(--pure-white);
     border-radius: 50%;
     text-decoration: none;
     transition: var(--transition);
@@ -757,7 +755,7 @@ body {
 
 .social-link:hover {
     background: var(--gold-accent);
-    color: var(--primary-black);
+    color: var(--pure-white);
     transform: translateY(-2px);
 }
 
@@ -798,7 +796,7 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background: var(--primary-black);
+        background: var(--pure-white);
         flex-direction: column;
         padding: 2rem;
         box-shadow: var(--shadow-medium);

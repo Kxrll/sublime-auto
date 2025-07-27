@@ -717,8 +717,8 @@ function createVehicleCard(vehicle) {
         ? '<button class="btn-primary">Acheter</button>'
         : '<button class="btn-primary">Louer</button>';
     
-    // Utiliser l'image im1.jpg comme image principale (première image du tableau)
-    const mainImage = vehicle.images[0];
+    // Utiliser la deuxième image comme image principale (im1.jpg pourrait être le logo)
+    const mainImage = vehicle.images[1] || vehicle.images[0];
     
     card.innerHTML = `
         <div class="vehicle-image">
@@ -782,7 +782,7 @@ function renderCarDetails() {
         <div class="car-details-grid">
             <div class="car-gallery">
                 <div class="gallery-main">
-                    <img id="main-image" src="${currentVehicle.images[0]}" alt="${currentVehicle.brand} ${currentVehicle.model}" />
+                    <img id="main-image" src="${currentVehicle.images[1] || currentVehicle.images[0]}" alt="${currentVehicle.brand} ${currentVehicle.model}" />
                     <button class="gallery-nav gallery-prev" onclick="previousImage()">
                         <i class="fas fa-chevron-left"></i>
                     </button>
@@ -792,7 +792,7 @@ function renderCarDetails() {
                 </div>
                 <div class="gallery-thumbnails">
                     ${currentVehicle.images.map((img, index) => 
-                        `<img src="${img}" alt="Photo ${index + 1}" class="thumbnail ${index === 0 ? 'active' : ''}" onclick="selectImage(${index})" />`
+                        `<img src="${img}" alt="Photo ${index + 1}" class="thumbnail ${index === 1 ? 'active' : ''}" onclick="selectImage(${index})" />`
                     ).join('')}
                 </div>
             </div>
@@ -850,7 +850,7 @@ function renderCarDetails() {
         </div>
     `;
     
-    currentImageIndex = 0;
+    currentImageIndex = 1; // Commencer par la deuxième image (index 1)
 }
 
 // Navigation de la galerie

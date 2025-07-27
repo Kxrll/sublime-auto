@@ -56,9 +56,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.25rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
 }
 
 .nav-brand {
@@ -97,6 +100,100 @@ body {
 .nav-menu {
     display: flex;
     gap: 2rem;
+}
+
+/* Navigation Center */
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-tagline {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-medium);
+    margin: 0;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-tagline::after {
+    content: '';
+    position: absolute;
+    right: -0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 1rem;
+    background: var(--border-light);
+}
+
+.nav-social {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.nav-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: var(--text-medium);
+    text-decoration: none;
+    border-radius: 50%;
+    transition: var(--transition);
+    background: var(--off-white);
+    border: 1px solid var(--border-light);
+}
+
+.nav-social-link:hover {
+    background: var(--gold-accent);
+    color: var(--pure-white);
+    border-color: var(--gold-accent);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-light);
+}
+
+.nav-social-link i {
+    font-size: 1.1rem;
+}
+
+/* Classes pour afficher/masquer du contenu selon la taille d'écran */
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Masquer le contenu desktop sur mobile */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+    
+    .mobile-only {
+        display: block;
+    }
+    
+    .nav-center {
+        display: none;
+    }
+}
+
+/* Masquer le contenu mobile sur desktop */
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none !important;
+    }
 }
 
 .nav-link {

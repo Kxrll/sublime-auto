@@ -10,6 +10,7 @@ const vehicles = [
     price: "",
     type: "vente", // vente ou location
         images: [
+      "img/citroen c3/im1.jpg",
       "img/citroen c3/852f897a-063b-4ce2-ae5f-ca3ae6b5501a.jpg",
       "img/citroen c3/4f077fa0-9a3a-40aa-b130-7ee82c6ace32.jpg",
       "img/citroen c3/e373a36e-e150-465e-9b18-6e1d33bad6a5.jpg",
@@ -34,6 +35,7 @@ const vehicles = [
     price: "",
     type: "location",
         images: [
+      "img/citroen grise/im1.jpg",
       "img/citroen grise/1c982f72-177e-45f3-8b5d-7bc0a54efb38.jpg",
       "img/citroen grise/7b94b013-c917-4262-8a41-738c90215ad0.jpg",
       "img/citroen grise/152b5f6e-ddee-4e52-b49a-466b01e0d698.jpg",
@@ -58,6 +60,7 @@ const vehicles = [
     price: "",
     type: "vente",
         images: [
+      "img/citroen jaune/im1.jpg",
       "img/citroen jaune/c14b912a-3db8-4bbd-8e9a-bc8c215f7892.jpg",
       "img/citroen jaune/de44b689-5383-405e-8992-007ed22fe636.jpg",
       "img/citroen jaune/15fb2005-7537-4574-b0f5-4fd338cd502b.jpg",
@@ -82,6 +85,7 @@ const vehicles = [
     price: "",
     type: "location",
         images: [
+      "img/citroen noir/im1.jpg",
       "img/citroen noir/826a402f-6f9c-4c7a-98d5-3eb0e746be90.jpg",
       "img/citroen noir/049f36c0-84f5-4189-a384-2e540d963b19.jpg",
       "img/citroen noir/6b17bff5-6e40-4d4f-912a-d36737ceeb66.jpg",
@@ -107,6 +111,7 @@ const vehicles = [
     price: "",
     type: "vente",
         images: [
+      "img/ford camion/im1.jpg",
       "img/ford camion/f76bffc8-c649-434a-b7d9-0b5ae2ae5137.jpg",
       "img/ford camion/680406eb-fa36-4095-a4f7-dde2b323f729.jpg",
       "img/ford camion/adaeb3c8-2dfa-4d3a-ac15-912b4cf136b0.jpg",
@@ -132,6 +137,7 @@ const vehicles = [
     price: "",
     type: "location",
     images: [
+      "img/opel/im1.jpg",
       "img/opel/3c048917-0cd9-4e94-b83d-86b419bc3472.jpg",
       "img/opel/82059f69-cfb1-4e89-a957-59fc174c56f6.jpg",
       "img/opel/854a7a65-e998-41ba-be2f-2418b635ea78.jpg",
@@ -157,6 +163,7 @@ const vehicles = [
     price: "",
     type: "vente",
     images: [
+      "img/opel noir/im1.jpg",
       "img/opel noir/5b1adf32-b929-4a19-9208-876e6fa509e0.jpg",
       "img/opel noir/ae35a08a-bdd6-4f47-867f-d6c7d9ee1ce9.jpg",
       "img/opel noir/2c48813c-f0de-4b3b-844b-987a55d87377.jpg",
@@ -179,6 +186,7 @@ const vehicles = [
     price: "",
     type: "vente",
     images: [
+      "img/peugot 308/im1.jpg",
       "img/peugot 308/799ead31-7db6-4d87-9a25-978df21bbd00.jpg",
       "img/peugot 308/c3eb6966-6973-4492-838c-fd2ac5418bb8.jpg",
       "img/peugot 308/4f78a3e4-a9ad-4d72-962a-ce36fae16029.jpg",
@@ -203,6 +211,7 @@ const vehicles = [
     price: "",
     type: "location",
     images: [
+      "img/peugot 308 EJ/im1.jpg",
       "img/peugot 308 EJ/c47d8ad3-de65-4455-b146-124634a2fbb0.jpg",
       "img/peugot 308 EJ/5212b602-20cb-48b1-a9be-4109806cfb46.jpg",
       "img/peugot 308 EJ/9a5647b0-8a54-4d26-9e80-29aa69b76428.jpg",
@@ -228,6 +237,7 @@ const vehicles = [
     price: "",
     type: "vente",
     images: [
+      "img/peugot 4007/im1.jpg",
       "img/peugot 4007/900be663-f25e-45f1-8199-6487798025ba.jpg",
       "img/peugot 4007/b44f9314-a682-44cd-9b10-7fe25b12c22b.jpg",
       "img/peugot 4007/337c831f-bca0-4457-8e56-6d476ab9a900.jpg",
@@ -252,6 +262,7 @@ const vehicles = [
     price: "",
     type: "location",
     images: [
+      "img/peugot DW/im1.jpg",
       "img/peugot DW/0ef9e233-7288-42f9-9f19-978cd2a2849f.jpg",
       "img/peugot DW/50f3910e-5b45-49cd-be7a-d9df29a98b9e.jpg",
       "img/peugot DW/8353dee4-7075-49aa-89f1-48adfeafd563.jpg",
@@ -277,6 +288,7 @@ const vehicles = [
     price: "",
     type: "vente",
     images: [
+      "img/peugot FD/im1.jpg",
       "img/peugot FD/a1bfc08a-c27e-4a64-b4a7-fabe042867f4.jpg"
     ],
     description: "Peugeot FD, voir toutes les photos pour plus de détails.",
@@ -296,6 +308,7 @@ const vehicles = [
     price: "",
     type: "location",
     images: [
+      "img/peugot grise/im1.jpg",
       "img/peugot grise/a62f5e6e-592c-47fd-8018-64455d34c7af.jpg",
       "img/peugot grise/65f43d52-bc26-4790-b2f4-26d08d588e13.jpg",
       "img/peugot grise/cc1d0c5a-4404-4458-af47-dca5d20126e2.jpg",
@@ -321,6 +334,7 @@ const vehicles = [
     price: "",
     type: "vente",
     images: [
+      "img/peugot noir/im1.jpg",
       "img/peugot noir/b95c9cfe-976f-4e5c-89ab-d9d008189229.jpg",
       "img/peugot noir/c2c38cfa-61c4-4af7-8556-94fc8430a999.jpg",
       "img/peugot noir/2390bcda-f171-4e29-838b-d4985cc8d649.jpg",
@@ -346,6 +360,7 @@ const vehicles = [
     price: "",
     type: "location",
     images: [
+      "img/peugot rouge/im1.jpg",
       "img/peugot rouge/20181df5-25df-4783-8edf-2fae30c92677.jpg",
       "img/peugot rouge/d128c8fa-d1ad-4953-a2d0-bfafc85d0fda.jpg",
       "img/peugot rouge/7807dfa2-bc69-47ac-aff2-71df48de4c6f.jpg",
@@ -370,6 +385,7 @@ const vehicles = [
     price: "",
     type: "vente",
     images: [
+      "img/pepugot trafic/im1.jpg",
       "img/pepugot trafic/1317e285-e38b-49af-af44-7468eacf7e1c.jpg",
       "img/pepugot trafic/3fa890e5-4369-41e0-9b3c-809e6f2433a3.jpg",
       "img/pepugot trafic/9254920a-258d-4eed-b5aa-017df17e516f.jpg",
@@ -396,6 +412,7 @@ const vehicles = [
     price: "",
     type: "location",
     images: [
+      "img/picasso/im1.jpg",
       "img/picasso/d4eb5bc0-9357-4f84-a14c-159339e33d26.jpg",
       "img/picasso/c7f065ec-7eba-4557-b014-b4cb54df1167.jpg",
       "img/picasso/567150f2-f7b3-4d39-bd36-db9a6f314153.jpg",
@@ -421,6 +438,7 @@ const vehicles = [
     price: "",
     type: "vente",
     images: [
+      "img/renaut blanche/im1.jpg",
       "img/renaut blanche/54f311ec-898a-4233-a1de-65b7d0036b4d.jpg",
       "img/renaut blanche/bbb18c09-1c54-44bf-9e2a-9d3ce5db21af.jpg",
       "img/renaut blanche/21f64645-dcaa-49fc-9359-ce6bae44e52a.jpg",
@@ -445,6 +463,7 @@ const vehicles = [
     price: "",
     type: "location",
     images: [
+      "img/renaut camion/im1.jpg",
       "img/renaut camion/358f5401-6f03-4c56-91fa-5d53a2af23d0.jpg",
       "img/renaut camion/a0ac52dd-fc69-4a75-9980-b198bd8ea5ae.jpg",
       "img/renaut camion/655df76a-dbff-427b-9ac1-932cce6e8955.jpg",
@@ -470,6 +489,7 @@ const vehicles = [
     price: "",
     type: "vente",
     images: [
+      "img/renaut camion FQ/im1.jpg",
       "img/renaut camion FQ/89074649-a477-4ed8-aca9-2630af9af850.jpg",
       "img/renaut camion FQ/fcc222a5-5644-455f-ad25-1796f2ffbf0c.jpg",
       "img/renaut camion FQ/b2ea5cf5-aa4a-4faf-aeee-80eb7f260a5f.jpg",
@@ -495,6 +515,7 @@ const vehicles = [
     price: "",
     type: "location",
     images: [
+      "img/senic/im1.jpg",
       "img/senic/3b0e9dba-a3b4-4975-a287-8bd5855d64a2.jpg",
       "img/senic/6395136b-d61d-46e2-a75d-2bb4fe6276ab.jpg",
       "img/senic/6fc96dd3-5930-4c9e-b445-4aa3c0b07436.jpg",
@@ -520,6 +541,7 @@ const vehicles = [
     price: "",
     type: "vente",
         images: [
+      "img/telsa/im1.jpg",
       "img/telsa/cfc45132-a11c-444d-a3e5-fc9624a384b5.jpg",
       "img/telsa/71a4555d-509f-4630-ab33-337fd03fbfb3.jpg",
       "img/telsa/d6cb5f36-f56a-40cc-b4f6-5420b667cad4.jpg",
@@ -695,9 +717,12 @@ function createVehicleCard(vehicle) {
         ? '<button class="btn-primary">Acheter</button>'
         : '<button class="btn-primary">Louer</button>';
     
+    // Utiliser l'image im1.jpg comme image principale (première image du tableau)
+    const mainImage = vehicle.images[0];
+    
     card.innerHTML = `
         <div class="vehicle-image">
-            <img src="${vehicle.images[0]}" alt="${vehicle.brand} ${vehicle.model}" />
+            <img src="${mainImage}" alt="${vehicle.brand} ${vehicle.model}" />
             <div class="vehicle-type ${typeClass}">${typeLabel}</div>
             <div class="vehicle-price">${fakePrice}</div>
         </div>

@@ -127,6 +127,24 @@ body {
     .mobile-only {
         display: block;
     }
+    
+    .nav {
+        padding: 1rem 1.5rem;
+        max-width: 100%;
+    }
+    
+    .brand-text {
+        font-size: 1.8rem;
+    }
+    
+    .brand-subtitle {
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+    }
+    
+    .nav-toggle {
+        display: block !important;
+    }
 }
 
 /* Masquer le contenu mobile sur desktop */

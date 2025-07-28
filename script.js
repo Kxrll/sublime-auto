@@ -654,13 +654,19 @@ function initializeFilterButtons() {
             
             // Déterminer le type de filtre (type de transaction ou marque)
             if (filterType === 'all' || filterType === 'vente' || filterType === 'location') {
-                // Filtre par type de transaction
-                document.querySelectorAll('.filter-buttons:first-child .filter-btn').forEach(btn => btn.classList.remove('active'));
+                // Filtre par type de transaction - désactiver tous les boutons de cette section
+                const transactionFilterSection = this.closest('.filter-section');
+                transactionFilterSection.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
                 this.classList.add('active');
                 currentFilter = filterType;
             } else {
-                // Filtre par marque
-                document.querySelectorAll('.filter-buttons:last-child .filter-btn').forEach(btn => btn.classList.remove('active'));
+                // Filtre par marque - désactiver tous les boutons de cette section
+                const brandFilterSection = this.closest('.filter-section');
+                brandFilterSection.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
                 this.classList.add('active');
                 currentBrandFilter = filterType;
             }

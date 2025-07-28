@@ -1329,83 +1329,12 @@ body {
 /* Responsive pour les pages de détails */
 @media (max-width: 768px) {
     .car-details {
-        padding: 120px var(--spacing-md) var(--spacing-2xl);
+        padding: 100px var(--spacing-sm) var(--spacing-xl);
     }
 
     .car-details-grid {
-        gap: var(--spacing-2xl);
+        gap: var(--spacing-xl);
         grid-template-columns: 1fr;
-    }
-
-    .gallery-main img {
-        height: 300px;
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .gallery-nav {
-        width: 40px;
-        height: 40px;
-    }
-
-    .gallery-prev {
-        left: var(--spacing-md);
-    }
-
-    .gallery-next {
-        right: var(--spacing-md);
-    }
-
-    .thumbnail {
-        width: 70px;
-        height: 55px;
-    }
-
-    .car-info h1 {
-        font-size: var(--font-size-3xl);
-    }
-
-    .car-price {
-        font-size: var(--font-size-2xl);
-    }
-
-    .car-specs-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--spacing-md);
-    }
-
-    .spec-item {
-        padding: var(--spacing-md);
-        min-height: 60px;
-        font-size: var(--font-size-sm);
-    }
-
-    .car-actions {
-        flex-direction: column;
-    }
-
-    .btn-call {
-        padding: var(--spacing-md) var(--spacing-lg);
-        font-size: var(--font-size-base);
-        justify-content: center;
-    }
-
-    .page-title {
-        font-size: var(--font-size-3xl);
-    }
-    
-    .page-title .birthstone-font {
-        font-size: var(--font-size-4xl);
-    }
-    
-    .page-subtitle {
-        font-size: var(--font-size-lg);
-    }
-}
-
-@media (max-width: 480px) {
-    .car-details {
-        padding: 100px var(--spacing-sm) var(--spacing-xl);
     }
 
     .gallery-main img {
@@ -1420,6 +1349,14 @@ body {
         font-size: var(--font-size-sm);
     }
 
+    .gallery-prev {
+        left: var(--spacing-sm);
+    }
+
+    .gallery-next {
+        right: var(--spacing-sm);
+    }
+
     .thumbnail {
         width: 60px;
         height: 45px;
@@ -1427,21 +1364,64 @@ body {
 
     .car-info h1 {
         font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-md);
     }
 
     .car-price {
         font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .car-specs-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
     }
 
     .spec-item {
         padding: var(--spacing-sm);
         min-height: 50px;
-        font-size: var(--font-size-xs);
+        font-size: var(--font-size-sm);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
     }
 
-    .btn-call {
+    .spec-label {
+        font-size: var(--font-size-xs);
+        color: var(--text-light);
+    }
+
+    .spec-value {
+        font-size: var(--font-size-sm);
+        font-weight: 600;
+    }
+
+    .car-description {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .car-description h3 {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .car-description p {
+        font-size: var(--font-size-sm);
+        line-height: 1.6;
+    }
+
+    .car-actions {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .btn-call,
+    .btn-primary {
         padding: var(--spacing-sm) var(--spacing-md);
         font-size: var(--font-size-sm);
+        justify-content: center;
+        min-height: 48px;
     }
 
     .page-title {
@@ -1455,25 +1435,125 @@ body {
     .page-subtitle {
         font-size: var(--font-size-base);
     }
-    
-    .contact-card {
-        padding: var(--spacing-lg);
+}
+
+@media (max-width: 480px) {
+    .car-details {
+        padding: 80px var(--spacing-xs) var(--spacing-lg);
     }
-    
-    .contact-item {
-        gap: var(--spacing-md);
-        margin-bottom: var(--spacing-xl);
+
+    .car-details-grid {
+        gap: var(--spacing-lg);
     }
-    
-    .contact-icon {
+
+    .gallery-main img {
+        height: 200px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .gallery-nav {
+        width: 32px;
+        height: 32px;
+        font-size: var(--font-size-xs);
+    }
+
+    .gallery-prev {
+        left: var(--spacing-xs);
+    }
+
+    .gallery-next {
+        right: var(--spacing-xs);
+    }
+
+    .thumbnail {
+        width: 50px;
+        height: 40px;
+    }
+
+    .car-info h1 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .car-price {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .car-specs-grid {
+        gap: var(--spacing-xs);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .spec-item {
+        padding: var(--spacing-xs);
+        min-height: 40px;
+        font-size: var(--font-size-xs);
+    }
+
+    .spec-label {
+        font-size: var(--font-size-xs);
+    }
+
+    .spec-value {
+        font-size: var(--font-size-xs);
+    }
+
+    .car-description {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .car-description h3 {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .car-description p {
+        font-size: var(--font-size-xs);
+    }
+
+    .car-actions {
+        gap: var(--spacing-sm);
+    }
+
+    .btn-call,
+    .btn-primary {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: var(--font-size-xs);
+        min-height: 40px;
+    }
+
+    .page-title {
         font-size: var(--font-size-xl);
     }
     
-    .contact-item h3 {
+    .page-title .birthstone-font {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .page-subtitle {
+        font-size: var(--font-size-sm);
+    }
+    
+    .contact-card {
+        padding: var(--spacing-md);
+    }
+    
+    .contact-item {
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .contact-icon {
         font-size: var(--font-size-lg);
     }
     
+    .contact-item h3 {
+        font-size: var(--font-size-base);
+    }
+    
     .contact-item p {
-        font-size: var(--font-size-sm);
+        font-size: var(--font-size-xs);
     }
 }

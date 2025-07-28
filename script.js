@@ -779,28 +779,65 @@ function loadCarDetails() {
     renderCarDetails();
 }
 
+// Fonction pour vérifier si une image existe
+function checkImageExists(imageSrc) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = imageSrc;
+    });
+}
+
+// Fonction pour filtrer les images existantes
+async function filterValidImages(images) {
+    const validImages = [];
+    for (let i = 0; i < images.length; i++) {
+        const exists = await checkImageExists(images[i]);
+        if (exists) {
+            validImages.push(images[i]);
+        }
+    }
+    return validImages;
+}
+
 // Afficher les détails du véhicule
-function renderCarDetails() {
+async function renderCarDetails() {
     const container = document.getElementById('car-details-content');
     if (!container || !currentVehicle) return;
+    
+    // Filtrer les images existantes
+    const validImages = await filterValidImages(currentVehicle.images);
+    
+    // Si aucune image valide, utiliser une image par défaut
+    if (validImages.length === 0) {
+        validImages.push('public/logo.jpg');
+    }
+    
+    // Mettre à jour les images du véhicule avec seulement les valides
+    currentVehicle.images = validImages;
     
     container.innerHTML = `
         <div class="car-details-grid">
             <div class="car-gallery">
                 <div class="gallery-main">
-                    <img id="main-image" src="${currentVehicle.images[0]}" alt="${currentVehicle.brand} ${currentVehicle.model}" />
-                    <button class="gallery-nav gallery-prev" onclick="previousImage()">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="gallery-nav gallery-next" onclick="nextImage()">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
+                    <img id="main-image" src="${validImages[0]}" alt="${currentVehicle.brand} ${currentVehicle.model}" />
+                    ${validImages.length > 1 ? `
+                        <button class="gallery-nav gallery-prev" onclick="previousImage()">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav gallery-next" onclick="nextImage()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    ` : ''}
                 </div>
-                <div class="gallery-thumbnails">
-                    ${currentVehicle.images.map((img, index) => 
-                        `<img src="${img}" alt="Photo ${index + 1}" class="thumbnail ${index === 0 ? 'active' : ''}" onclick="selectImage(${index})" />`
-                    ).join('')}
-                </div>
+                ${validImages.length > 1 ? `
+                    <div class="gallery-thumbnails">
+                        ${validImages.map((img, index) => 
+                            `<img src="${img}" alt="Photo ${index + 1}" class="thumbnail ${index === 0 ? 'active' : ''}" onclick="selectImage(${index})" />`
+                        ).join('')}
+                    </div>
+                ` : ''}
             </div>
             
             <div class="car-info">
@@ -810,27 +847,27 @@ function renderCarDetails() {
                 <div class="car-specs-grid">
                     <div class="spec-item">
                         <span class="spec-label">Année</span>
-                        <span class="spec-value">${currentVehicle.year}</span>
+                        <span class="spec-value">${currentVehicle.year || 'N/A'}</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-label">Kilométrage</span>
-                        <span class="spec-value">${currentVehicle.mileage} km</span>
+                        <span class="spec-value">${currentVehicle.mileage || 'N/A'} km</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-label">Carburant</span>
-                        <span class="spec-value">${currentVehicle.fuel}</span>
+                        <span class="spec-value">${currentVehicle.fuel || 'N/A'}</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-label">Transmission</span>
-                        <span class="spec-value">${currentVehicle.transmission}</span>
+                        <span class="spec-value">${currentVehicle.transmission || 'N/A'}</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-label">Portes</span>
-                        <span class="spec-value">${currentVehicle.doors}</span>
+                        <span class="spec-value">${currentVehicle.doors || 'N/A'}</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-label">Puissance</span>
-                        <span class="spec-value">${currentVehicle.power}</span>
+                        <span class="spec-value">${currentVehicle.power || 'N/A'}</span>
                     </div>
                 </div>
                 
@@ -838,12 +875,14 @@ function renderCarDetails() {
                     <h3>Description</h3>
                     <p>${currentVehicle.description}</p>
                     
-                    <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Équipements</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        ${currentVehicle.features.map(feature => 
-                            `<li style="padding: 0.25rem 0; color: var(--text-light);"><i class="fas fa-check" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>${feature}</li>`
-                        ).join('')}
-                    </ul>
+                    ${currentVehicle.features && currentVehicle.features.length > 0 ? `
+                        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Équipements</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            ${currentVehicle.features.map(feature => 
+                                `<li style="padding: 0.25rem 0; color: var(--text-light);"><i class="fas fa-check" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>${feature}</li>`
+                            ).join('')}
+                        </ul>
+                    ` : ''}
                 </div>
                 
                 <div class="car-actions">

@@ -85,6 +85,7 @@ body {
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(15px);
+    gap: var(--spacing-lg);
 }
 
 .nav-brand {
@@ -692,22 +693,40 @@ body {
 /* Responsive Design - Optimisations mobiles améliorées */
 @media (max-width: 768px) {
     .nav {
-        padding: var(--spacing-md) var(--spacing-lg);
+        padding: var(--spacing-sm) var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-brand {
+        flex: 1;
+        min-width: 0;
     }
     
     .brand-text {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-2xl);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .brand-subtitle {
-        font-size: var(--font-size-sm);
-        margin-left: var(--spacing-sm);
+        font-size: var(--font-size-xs);
+        margin-left: var(--spacing-xs);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .nav-toggle {
         display: block;
-        font-size: var(--font-size-xl);
-        padding: var(--spacing-sm);
+        font-size: var(--font-size-lg);
+        padding: var(--spacing-xs);
+        flex-shrink: 0;
+        min-width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .nav-menu {
@@ -899,21 +918,40 @@ body {
 
 @media (max-width: 480px) {
     .nav {
-        padding: var(--spacing-sm) var(--spacing-md);
+        padding: var(--spacing-xs) var(--spacing-sm);
+        gap: var(--spacing-xs);
+    }
+    
+    .nav-brand {
+        flex: 1;
+        min-width: 0;
     }
     
     .brand-text {
-        font-size: var(--font-size-2xl);
+        font-size: var(--font-size-xl);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .brand-subtitle {
         font-size: var(--font-size-xs);
         margin-left: var(--spacing-xs);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 120px;
     }
     
     .nav-toggle {
-        font-size: var(--font-size-lg);
+        font-size: var(--font-size-base);
         padding: var(--spacing-xs);
+        flex-shrink: 0;
+        min-width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .hero-title {

@@ -172,6 +172,31 @@ const vehicles = [
     transmission: "",
     doors: "",
     power: ""
+  },
+  // Peugeot 308 - Vente
+  {
+    id: 8,
+    brand: "Peugeot",
+    model: "308",
+    year: "",
+    mileage: "",
+    price: "",
+    type: "vente",
+    images: [
+      "img/peugot 308/im1.jpg",
+      "img/peugot 308/f101db1b-1f69-4d71-b424-34c2efca2905.jpg",
+      "img/peugot 308/efd5b98d-d59e-491f-8cb1-b56f75544feb.jpg",
+      "img/peugot 308/93144e7f-3c19-4caa-8ef9-d28d16ec36ae.jpg",
+      "img/peugot 308/5533ac78-c7ba-4689-9156-a3ea407cd2df.jpg",
+      "img/peugot 308/16f81965-9b4e-4f32-998a-27cd252e2f4f.jpg",
+      "img/peugot 308/1dc9e37a-9618-40b3-aac3-fb0dc60ebba7.jpg"
+    ],
+    description: "Peugeot 308, voir toutes les photos pour plus de détails.",
+    features: [],
+    fuel: "",
+    transmission: "",
+    doors: "",
+    power: ""
   }
 ];
 
@@ -325,7 +350,6 @@ function loadVehicles() {
 function createVehicleCard(vehicle) {
     const card = document.createElement('div');
     card.className = 'vehicle-card fade-in';
-    card.onclick = () => viewVehicleDetails(vehicle.id);
     
     const typeLabel = vehicle.type === 'vente' ? 'Vente' : 'Location';
     const typeClass = vehicle.type === 'vente' ? 'vente' : 'location';
@@ -342,11 +366,22 @@ function createVehicleCard(vehicle) {
     // Utiliser l'image im1.jpg comme image principale (première image du tableau)
     const mainImage = vehicle.images[0];
     
+    // Créer les boutons de navigation si il y a plusieurs images
+    const navigationButtons = vehicle.images.length > 1 ? `
+        <button class="vehicle-nav vehicle-prev" onclick="event.stopPropagation(); previousVehicleImage(${vehicle.id})">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="vehicle-nav vehicle-next" onclick="event.stopPropagation(); nextVehicleImage(${vehicle.id})">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    ` : '';
+    
     card.innerHTML = `
-        <div class="vehicle-image">
+        <div class="vehicle-image" data-vehicle-id="${vehicle.id}" data-current-image="0">
             <img src="${mainImage}" alt="${vehicle.brand} ${vehicle.model}" />
             <div class="vehicle-type ${typeClass}">${typeLabel}</div>
             <div class="vehicle-price">${fakePrice}</div>
+            ${navigationButtons}
         </div>
         <div class="vehicle-info">
             <h3 class="vehicle-title">${vehicle.brand} ${vehicle.model}</h3>
@@ -359,6 +394,13 @@ function createVehicleCard(vehicle) {
             ${actionBtn}
         </div>
     `;
+    
+    // Ajouter l'événement de clic pour voir les détails (sauf sur les boutons de navigation)
+    card.addEventListener('click', (e) => {
+        if (!e.target.closest('.vehicle-nav')) {
+            viewVehicleDetails(vehicle.id);
+        }
+    });
     
     return card;
 }
@@ -546,6 +588,47 @@ function updateMainImage() {
     }
 }
 
+// Navigation des images dans les cartes de véhicules (page d'accueil)
+function previousVehicleImage(vehicleId) {
+    const vehicle = vehicles.find(v => v.id === vehicleId);
+    if (!vehicle) return;
+    
+    const vehicleImageContainer = document.querySelector(`[data-vehicle-id="${vehicleId}"]`);
+    if (!vehicleImageContainer) return;
+    
+    let currentImageIndex = parseInt(vehicleImageContainer.getAttribute('data-current-image'));
+    currentImageIndex = (currentImageIndex - 1 + vehicle.images.length) % vehicle.images.length;
+    
+    updateVehicleCardImage(vehicleId, currentImageIndex);
+}
+
+function nextVehicleImage(vehicleId) {
+    const vehicle = vehicles.find(v => v.id === vehicleId);
+    if (!vehicle) return;
+    
+    const vehicleImageContainer = document.querySelector(`[data-vehicle-id="${vehicleId}"]`);
+    if (!vehicleImageContainer) return;
+    
+    let currentImageIndex = parseInt(vehicleImageContainer.getAttribute('data-current-image'));
+    currentImageIndex = (currentImageIndex + 1) % vehicle.images.length;
+    
+    updateVehicleCardImage(vehicleId, currentImageIndex);
+}
+
+function updateVehicleCardImage(vehicleId, imageIndex) {
+    const vehicle = vehicles.find(v => v.id === vehicleId);
+    if (!vehicle) return;
+    
+    const vehicleImageContainer = document.querySelector(`[data-vehicle-id="${vehicleId}"]`);
+    if (!vehicleImageContainer) return;
+    
+    const imageElement = vehicleImageContainer.querySelector('img');
+    if (imageElement) {
+        imageElement.src = vehicle.images[imageIndex];
+        vehicleImageContainer.setAttribute('data-current-image', imageIndex);
+    }
+}
+
 // Formulaire de contact
 function initializeContactForm() {
     const form = document.getElementById('contact-form');
@@ -634,6 +717,12 @@ function generatePriceForVehicle(vehicle) {
             if (vehicle.model === 'Expert') {
                 price = getRandomInt(15000, 25000);
             } else if (vehicle.model === 'Camion FQ') {
+                price = getRandomInt(12000, 20000);
+            } else {
+                price = getRandomInt(10000, 18000);
+            }
+        } else if (vehicle.brand === 'Peugeot') {
+            if (vehicle.model === '308') {
                 price = getRandomInt(12000, 20000);
             } else {
                 price = getRandomInt(10000, 18000);

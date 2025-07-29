@@ -1,126 +1,149 @@
 // Données des véhicules
 const vehicles = [
-  // Citroen C3 - Vente
-    {
-        id: 1,
-    brand: "Citroen",
-    model: "C3",
+  // Camion Renault Expert - Vente
+  {
+    id: 1,
+    brand: "Renault",
+    model: "Expert",
     year: "",
     mileage: "",
     price: "",
-    type: "vente", // vente ou location
-        images: [
-      "img/citroen c3/im1.jpg",
-      "img/citroen c3/852f897a-063b-4ce2-ae5f-ca3ae6b5501a.jpg",
-      "img/citroen c3/4f077fa0-9a3a-40aa-b130-7ee82c6ace32.jpg",
-      "img/citroen c3/e373a36e-e150-465e-9b18-6e1d33bad6a5.jpg",
-      "img/citroen c3/d3288720-0541-4b4b-8a82-24ebdeb2dad3.jpg",
-      "img/citroen c3/730ad9e1-8a31-4b66-9eb2-a0abc6e5cf18.jpg",
-      "img/citroen c3/c58d584b-a2ae-4288-aacf-1d9ee77b7a57.jpg"
+    type: "vente",
+    images: [
+      "img/camion renau expert/im1.jpg",
+      "img/camion renau expert/ce78d37a-0713-48e0-b5f2-2653011611d9.jpg",
+      "img/camion renau expert/5295b539-fcdf-4650-9b39-278d7cb90a3a.jpg",
+      "img/camion renau expert/4cb5cb91-fe8c-45f6-a268-9127e920b50d.jpg",
+      "img/camion renau expert/0bc4c8d1-0d74-46c3-8fdb-db3deb9e04d2.jpg",
+      "img/camion renau expert/4eae9ed6-5c06-4f24-bb14-2b70206944db.jpg",
+      "img/camion renau expert/e0a7b43e-86e2-4b28-8cd4-1449b3e26424.jpg",
+      "img/camion renau expert/e7f4121b-9953-4830-be4e-d491bd344da3.jpg"
     ],
-    description: "Citroen C3, voir toutes les photos pour plus de détails.",
+    description: "Camion Renault Expert, voir toutes les photos pour plus de détails.",
     features: [],
     fuel: "",
     transmission: "",
     doors: "",
     power: ""
   },
-  // Citroen Grise - Location
-    {
-        id: 2,
-    brand: "Citroen",
-    model: "Grise",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "location",
-        images: [
-      "img/citroen grise/im1.jpg",
-      "img/citroen grise/1c982f72-177e-45f3-8b5d-7bc0a54efb38.jpg",
-      "img/citroen grise/7b94b013-c917-4262-8a41-738c90215ad0.jpg",
-      "img/citroen grise/152b5f6e-ddee-4e52-b49a-466b01e0d698.jpg",
-      "img/citroen grise/f07e032f-e6c5-4467-b56d-69ef678e47e7.jpg",
-      "img/citroen grise/e9da7fe2-c0c0-42ba-bb04-0336584d876a.jpg",
-      "img/citroen grise/c0f15c90-43c4-4d6c-a19b-0f56ae546ad1.jpg"
-    ],
-    description: "Citroen grise, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Citroen Jaune - Vente
-    {
-        id: 3,
-    brand: "Citroen",
+  // Camion Jaune - Vente
+  {
+    id: 2,
+    brand: "Camion",
     model: "Jaune",
     year: "",
     mileage: "",
     price: "",
     type: "vente",
-        images: [
-      "img/citroen jaune/im1.jpg",
-      "img/citroen jaune/c14b912a-3db8-4bbd-8e9a-bc8c215f7892.jpg",
-      "img/citroen jaune/de44b689-5383-405e-8992-007ed22fe636.jpg",
-      "img/citroen jaune/15fb2005-7537-4574-b0f5-4fd338cd502b.jpg",
-      "img/citroen jaune/948709f5-94be-4d32-9ea5-8f53460accdf.jpg",
-      "img/citroen jaune/b5e83397-a0e2-45d3-aea7-9def63f47b13.jpg",
-      "img/citroen jaune/541d8a61-dc1e-4c33-97b2-073ff36a5395.jpg"
+    images: [
+      "img/camion jaune/im1.jpg",
+      "img/camion jaune/d3b346d2-7e3c-49bc-9b98-badd5e710849.jpg",
+      "img/camion jaune/ceb0a836-bfc1-4b79-82cf-69f0311c5438.jpg",
+      "img/camion jaune/465399be-5b71-47b1-b369-6c406e22e0e4.jpg",
+      "img/camion jaune/445560bd-1eb0-4dfb-bcc9-e53cc93b136a.jpg",
+      "img/camion jaune/817d8bf3-0668-483c-9725-aafd7982d178.jpg",
+      "img/camion jaune/8c6305ef-730b-4e65-9e6c-b8f10c467621.jpg",
+      "img/camion jaune/3b700226-c25f-4577-85d0-d983efa0a6f2.jpg",
+      "img/camion jaune/38a7f26d-9db1-4d9f-927e-bb5065fd1385.jpg",
+      "img/camion jaune/3f3b951d-27fa-4747-9fbe-af22e7917593.jpg",
+      "img/camion jaune/d40199c9-f00a-4ef0-87f7-141c65bb0d0c.jpg",
+      "img/camion jaune/e719ee2a-e7e6-418b-9920-a93feda14d2d.jpg"
     ],
-    description: "Citroen jaune, voir toutes les photos pour plus de détails.",
+    description: "Camion jaune, voir toutes les photos pour plus de détails.",
     features: [],
     fuel: "",
     transmission: "",
     doors: "",
     power: ""
   },
-  // Citroen Noir - Location
-    {
-        id: 4,
-    brand: "Citroen",
-    model: "Noir",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "location",
-        images: [
-      "img/citroen noir/im1.jpg",
-      "img/citroen noir/826a402f-6f9c-4c7a-98d5-3eb0e746be90.jpg",
-      "img/citroen noir/049f36c0-84f5-4189-a384-2e540d963b19.jpg",
-      "img/citroen noir/6b17bff5-6e40-4d4f-912a-d36737ceeb66.jpg",
-      "img/citroen noir/cb9749af-4f8b-4f1b-8212-10d0feb6c065.jpg",
-      "img/citroen noir/f8a93560-7266-4951-84c6-a562a9806411.jpg",
-      "img/citroen noir/d44d0682-5d65-488d-8dc3-7f8f7486b2d0.jpg",
-      "img/citroen noir/f797c8dc-2b63-4baf-9764-9b4df1ef8ae7.jpg"
-    ],
-    description: "Citroen noir, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Ford Camion - Vente
-    {
-        id: 5,
-    brand: "Ford",
-    model: "Camion",
+  // Camion FG - Vente
+  {
+    id: 3,
+    brand: "Camion",
+    model: "FG",
     year: "",
     mileage: "",
     price: "",
     type: "vente",
-        images: [
-      "img/ford camion/im1.jpg",
-      "img/ford camion/f76bffc8-c649-434a-b7d9-0b5ae2ae5137.jpg",
-      "img/ford camion/680406eb-fa36-4095-a4f7-dde2b323f729.jpg",
-      "img/ford camion/adaeb3c8-2dfa-4d3a-ac15-912b4cf136b0.jpg",
-      "img/ford camion/397bd7e6-ecae-4e49-b565-1bc5d8d3c498.jpg",
-      "img/ford camion/226e595d-f30d-4ff2-bb07-196a11295222.jpg",
-      "img/ford camion/f3c5ac74-7d6d-4a4f-ba5a-2afb0d4c450a.jpg",
-      "img/ford camion/5dd32a90-dda3-4734-a629-d94dce0ccc1b.jpg"
+    images: [
+      "img/camion fg/im1.jpg",
+      "img/camion fg/f6937edc-6cbb-4315-a645-973a3f194d29.jpg",
+      "img/camion fg/e56c5b66-35d0-4375-bdc5-03597650c592.jpg",
+      "img/camion fg/1098b04d-c6eb-4afd-bde1-961dd4216564.jpg",
+      "img/camion fg/508b44d3-4851-4649-a8f1-4541602bb87e.jpg",
+      "img/camion fg/b35983e8-79be-48f0-8616-b67c9b6bce03.jpg",
+      "img/camion fg/db6cb51b-49dc-4f69-b700-94e6577b0c7d.jpg",
+      "img/camion fg/13df0702-c415-437e-92d0-001858bc0a82.jpg",
+      "img/camion fg/9b9f2847-7e98-45b2-a6af-127235bf4191.jpg"
     ],
-    description: "Ford camion, voir toutes les photos pour plus de détails.",
+    description: "Camion FG, voir toutes les photos pour plus de détails.",
+    features: [],
+    fuel: "",
+    transmission: "",
+    doors: "",
+    power: ""
+  },
+  // Renault Camion FQ - Vente
+  {
+    id: 4,
+    brand: "Renault",
+    model: "Camion FQ",
+    year: "",
+    mileage: "",
+    price: "",
+    type: "vente",
+    images: [
+      "img/renaut camion FQ/im1.jpg",
+      "img/renaut camion FQ/6de7cf04-eaba-4b67-ba5e-0141a35f52b2.jpg",
+      "img/renaut camion FQ/8830b1ed-42c1-4b9e-8570-34d6019875e6.jpg",
+      "img/renaut camion FQ/89074649-a477-4ed8-aca9-2630af9af850.jpg",
+      "img/renaut camion FQ/fcc222a5-5644-455f-ad25-1796f2ffbf0c.jpg"
+    ],
+    description: "Renault camion FQ, voir toutes les photos pour plus de détails.",
+    features: [],
+    fuel: "",
+    transmission: "",
+    doors: "",
+    power: ""
+  },
+  // Renault Camion - Location
+  {
+    id: 5,
+    brand: "Renault",
+    model: "Camion",
+    year: "",
+    mileage: "",
+    price: "",
+    type: "location",
+    images: [
+      "img/renaut camion/im1.jpg",
+      "img/renaut camion/31f03c51-99fb-4a07-9e4c-1a72f44ccd14.jpg",
+      "img/renaut camion/655df76a-dbff-427b-9ac1-932cce6e8955.jpg",
+      "img/renaut camion/77e28f5b-10d6-481b-b6d7-307a3a5247a4.jpg"
+    ],
+    description: "Renault camion, voir toutes les photos pour plus de détails.",
+    features: [],
+    fuel: "",
+    transmission: "",
+    doors: "",
+    power: ""
+  },
+  // Picasso - Location
+  {
+    id: 6,
+    brand: "Picasso",
+    model: "",
+    year: "",
+    mileage: "",
+    price: "",
+    type: "location",
+    images: [
+      "img/picasso/im1.jpg",
+      "img/picasso/567150f2-f7b3-4d39-bd36-db9a6f314153.jpg",
+      "img/picasso/c7f065ec-7eba-4557-b014-b4cb54df1167.jpg",
+      "img/picasso/cb4d675f-98a6-4eba-ad05-af065107b693.jpg"
+    ],
+    description: "Picasso, voir toutes les photos pour plus de détails.",
     features: [],
     fuel: "",
     transmission: "",
@@ -128,8 +151,8 @@ const vehicles = [
     power: ""
   },
   // Opel - Location
-    {
-        id: 6,
+  {
+    id: 7,
     brand: "Opel",
     model: "",
     year: "",
@@ -139,11 +162,8 @@ const vehicles = [
     images: [
       "img/opel/im1.jpg",
       "img/opel/3c048917-0cd9-4e94-b83d-86b419bc3472.jpg",
-      "img/opel/82059f69-cfb1-4e89-a957-59fc174c56f6.jpg",
-      "img/opel/854a7a65-e998-41ba-be2f-2418b635ea78.jpg",
-      "img/opel/4670ea36-e4a0-4028-b10d-2573c05e2a66.jpg",
-      "img/opel/a33807be-7512-43d3-acc1-4a1e885297bb.jpg",
       "img/opel/5520abe6-5206-41d1-ab42-62bc2a0e700b.jpg",
+      "img/opel/a33807be-7512-43d3-acc1-4a1e885297bb.jpg",
       "img/opel/e0acaaf4-ca58-42af-b8aa-db643700dd13.jpg"
     ],
     description: "Opel, voir toutes les photos pour plus de détails.",
@@ -152,411 +172,7 @@ const vehicles = [
     transmission: "",
     doors: "",
     power: ""
-  },
-  // Opel Noir - Vente
-  {
-    id: 7,
-    brand: "Opel",
-    model: "Noir",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "vente",
-    images: [
-      "img/opel noir/im1.jpg",
-      "img/opel noir/5b1adf32-b929-4a19-9208-876e6fa509e0.jpg",
-      "img/opel noir/ae35a08a-bdd6-4f47-867f-d6c7d9ee1ce9.jpg",
-      "img/opel noir/2c48813c-f0de-4b3b-844b-987a55d87377.jpg",
-      "img/opel noir/d511ab2e-407e-4d2f-8946-19edd0f0fdf8.jpg"
-    ],
-    description: "Opel noir, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Peugeot 308 - Vente
-  {
-    id: 8,
-    brand: "Peugeot",
-    model: "308",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "vente",
-    images: [
-      "img/peugot 308/im1.jpg",
-      "img/peugot 308/799ead31-7db6-4d87-9a25-978df21bbd00.jpg",
-      "img/peugot 308/c3eb6966-6973-4492-838c-fd2ac5418bb8.jpg",
-      "img/peugot 308/4f78a3e4-a9ad-4d72-962a-ce36fae16029.jpg",
-      "img/peugot 308/c2fc66e3-7899-4084-8175-12b97aa94316.jpg",
-      "img/peugot 308/8dac19b4-39c3-4f7b-a676-0c92327be87f.jpg",
-      "img/peugot 308/e89eec56-6366-4193-8034-93c0d98b2160.jpg"
-    ],
-    description: "Peugeot 308, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Peugeot 308 EJ - Location
-  {
-    id: 9,
-    brand: "Peugeot",
-    model: "308 EJ",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "location",
-    images: [
-      "img/peugot 308 EJ/im1.jpg",
-      "img/peugot 308 EJ/c47d8ad3-de65-4455-b146-124634a2fbb0.jpg",
-      "img/peugot 308 EJ/5212b602-20cb-48b1-a9be-4109806cfb46.jpg",
-      "img/peugot 308 EJ/9a5647b0-8a54-4d26-9e80-29aa69b76428.jpg",
-      "img/peugot 308 EJ/ff16b369-ad3a-44ca-8f39-7ecebfc5b3ec.jpg",
-      "img/peugot 308 EJ/f2e9e62e-6948-4295-abda-f1cd20828d5c.jpg",
-      "img/peugot 308 EJ/9fc57b68-397f-4680-bf5f-f0d86d1cdcd2.jpg",
-      "img/peugot 308 EJ/cc925dfa-675e-410e-b9f9-d007b35585d0.jpg"
-    ],
-    description: "Peugeot 308 EJ, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Peugeot 4007 - Vente
-  {
-    id: 10,
-    brand: "Peugeot",
-    model: "4007",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "vente",
-    images: [
-      "img/peugot 4007/im1.jpg",
-      "img/peugot 4007/900be663-f25e-45f1-8199-6487798025ba.jpg",
-      "img/peugot 4007/b44f9314-a682-44cd-9b10-7fe25b12c22b.jpg",
-      "img/peugot 4007/337c831f-bca0-4457-8e56-6d476ab9a900.jpg",
-      "img/peugot 4007/977aa122-a245-407d-9764-c53339df6fef.jpg",
-      "img/peugot 4007/ba2cdc1e-95e7-4496-b0bb-c3781aa7df16.jpg",
-      "img/peugot 4007/92b8985e-2a36-4154-8247-9d505ed33046.jpg"
-    ],
-    description: "Peugeot 4007, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Peugeot DW - Location
-  {
-    id: 11,
-    brand: "Peugeot",
-    model: "DW",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "location",
-    images: [
-      "img/peugot DW/im1.jpg",
-      "img/peugot DW/0ef9e233-7288-42f9-9f19-978cd2a2849f.jpg",
-      "img/peugot DW/50f3910e-5b45-49cd-be7a-d9df29a98b9e.jpg",
-      "img/peugot DW/8353dee4-7075-49aa-89f1-48adfeafd563.jpg",
-      "img/peugot DW/dc4815dc-a5ed-463c-93d9-55cab0b1a7cf.jpg",
-      "img/peugot DW/1aa87ddd-e19e-4bae-8788-7be98c0a4d56.jpg",
-      "img/peugot DW/9951dcf2-9039-4ca1-bd08-141343110ef1.jpg",
-      "img/peugot DW/238d2fcd-2712-4cbf-ae4d-ad86b08235e5.jpg"
-    ],
-    description: "Peugeot DW, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Peugeot FD - Vente
-  {
-    id: 12,
-    brand: "Peugeot",
-    model: "FD",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "vente",
-    images: [
-      "img/peugot FD/im1.jpg",
-      "img/peugot FD/a1bfc08a-c27e-4a64-b4a7-fabe042867f4.jpg"
-    ],
-    description: "Peugeot FD, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Peugeot Grise - Location
-  {
-    id: 13,
-    brand: "Peugeot",
-    model: "Grise",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "location",
-    images: [
-      "img/peugot grise/im1.jpg",
-      "img/peugot grise/a62f5e6e-592c-47fd-8018-64455d34c7af.jpg",
-      "img/peugot grise/65f43d52-bc26-4790-b2f4-26d08d588e13.jpg",
-      "img/peugot grise/cc1d0c5a-4404-4458-af47-dca5d20126e2.jpg",
-      "img/peugot grise/9fd81a79-e65b-480d-8d30-3ac163f45791.jpg",
-      "img/peugot grise/7f3f83a4-61c9-4b4b-8e39-ca27f3f165f7.jpg",
-      "img/peugot grise/703a3ca9-1710-4f9f-ac75-b344021d7e75.jpg",
-      "img/peugot grise/34e8a962-6a02-481c-8818-364cb0388fb1.jpg"
-    ],
-    description: "Peugeot grise, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Peugeot Noir - Vente
-  {
-    id: 14,
-    brand: "Peugeot",
-    model: "Noir",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "vente",
-    images: [
-      "img/peugot noir/im1.jpg",
-      "img/peugot noir/b95c9cfe-976f-4e5c-89ab-d9d008189229.jpg",
-      "img/peugot noir/c2c38cfa-61c4-4af7-8556-94fc8430a999.jpg",
-      "img/peugot noir/2390bcda-f171-4e29-838b-d4985cc8d649.jpg",
-      "img/peugot noir/e92cbdba-a446-490f-bf27-648ccb6f8f6e.jpg",
-      "img/peugot noir/34b2b766-dc9d-4a84-b081-0e3ee5109675.jpg",
-      "img/peugot noir/9c5a47e1-8fc7-4b78-a4de-054487a0a4f0.jpg",
-      "img/peugot noir/c764a245-586c-4aff-834d-bd3fc00e995b.jpg"
-    ],
-    description: "Peugeot noir, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Peugeot Rouge - Location
-  {
-    id: 15,
-    brand: "Peugeot",
-    model: "Rouge",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "location",
-    images: [
-      "img/peugot rouge/im1.jpg",
-      "img/peugot rouge/20181df5-25df-4783-8edf-2fae30c92677.jpg",
-      "img/peugot rouge/d128c8fa-d1ad-4953-a2d0-bfafc85d0fda.jpg",
-      "img/peugot rouge/7807dfa2-bc69-47ac-aff2-71df48de4c6f.jpg",
-      "img/peugot rouge/a664bc61-d5a6-4c4c-a4d7-1d31aef662af.jpg",
-      "img/peugot rouge/c74d4fba-5d6e-43a9-b029-9ce6a27a4076.jpg",
-      "img/peugot rouge/dbb27b00-74e8-4962-a147-ebb4882b20ad.jpg"
-    ],
-    description: "Peugeot rouge, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Peugeot Trafic - Vente
-  {
-    id: 16,
-    brand: "Peugeot",
-    model: "Trafic",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "vente",
-    images: [
-      "img/pepugot trafic/im1.jpg",
-      "img/pepugot trafic/1317e285-e38b-49af-af44-7468eacf7e1c.jpg",
-      "img/pepugot trafic/3fa890e5-4369-41e0-9b3c-809e6f2433a3.jpg",
-      "img/pepugot trafic/9254920a-258d-4eed-b5aa-017df17e516f.jpg",
-      "img/pepugot trafic/cdf114bf-127b-42a1-acb7-93a373860d70.jpg",
-      "img/pepugot trafic/6e766c4e-fd37-4fde-899d-b32290c1c573.jpg",
-      "img/pepugot trafic/b429257b-2717-4a2d-9d01-b37619d431e8.jpg",
-      "img/pepugot trafic/8f460af3-cc62-42d2-b1df-8df90b27aac2.jpg",
-      "img/pepugot trafic/8c15f741-e40a-438d-bdd1-6024ce69b12e.jpg"
-    ],
-    description: "Peugeot trafic, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Picasso - Location
-  {
-    id: 17,
-    brand: "Picasso",
-    model: "",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "location",
-    images: [
-      "img/picasso/im1.jpg",
-      "img/picasso/d4eb5bc0-9357-4f84-a14c-159339e33d26.jpg",
-      "img/picasso/c7f065ec-7eba-4557-b014-b4cb54df1167.jpg",
-      "img/picasso/567150f2-f7b3-4d39-bd36-db9a6f314153.jpg",
-      "img/picasso/916a3310-efa4-4755-aaec-721ae84c9680.jpg",
-      "img/picasso/1b41c4cf-2533-40ad-a940-41bdbe0d94e7.jpg",
-      "img/picasso/cb4d675f-98a6-4eba-ad05-af065107b693.jpg",
-      "img/picasso/0d40549d-aba0-48a5-9775-e255b16af369.jpg"
-    ],
-    description: "Picasso, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Renault Blanche - Vente
-  {
-    id: 18,
-    brand: "Renault",
-    model: "Blanche",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "vente",
-    images: [
-      "img/renaut blanche/im1.jpg",
-      "img/renaut blanche/54f311ec-898a-4233-a1de-65b7d0036b4d.jpg",
-      "img/renaut blanche/bbb18c09-1c54-44bf-9e2a-9d3ce5db21af.jpg",
-      "img/renaut blanche/21f64645-dcaa-49fc-9359-ce6bae44e52a.jpg",
-      "img/renaut blanche/08c97783-ffc7-4cbf-94bb-524a9db93ffa.jpg",
-      "img/renaut blanche/c43159fe-2cca-499c-86fc-0969830403db.jpg",
-      "img/renaut blanche/287a81bd-860f-4079-aa9e-d8004644d2c7.jpg"
-    ],
-    description: "Renault blanche, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Renault Camion - Location
-  {
-    id: 19,
-    brand: "Renault",
-    model: "Camion",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "location",
-    images: [
-      "img/renaut camion/im1.jpg",
-      "img/renaut camion/358f5401-6f03-4c56-91fa-5d53a2af23d0.jpg",
-      "img/renaut camion/a0ac52dd-fc69-4a75-9980-b198bd8ea5ae.jpg",
-      "img/renaut camion/655df76a-dbff-427b-9ac1-932cce6e8955.jpg",
-      "img/renaut camion/77e28f5b-10d6-481b-b6d7-307a3a5247a4.jpg",
-      "img/renaut camion/31f03c51-99fb-4a07-9e4c-1a72f44ccd14.jpg",
-      "img/renaut camion/65bb90b3-c26d-4978-a1ca-e3dab962c0b1.jpg",
-      "img/renaut camion/f8c7737e-9ad0-4624-95e3-010baa7e5878.jpg"
-    ],
-    description: "Renault camion, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Renault Camion FQ - Vente
-  {
-    id: 20,
-    brand: "Renault",
-    model: "Camion FQ",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "vente",
-    images: [
-      "img/renaut camion FQ/im1.jpg",
-      "img/renaut camion FQ/89074649-a477-4ed8-aca9-2630af9af850.jpg",
-      "img/renaut camion FQ/fcc222a5-5644-455f-ad25-1796f2ffbf0c.jpg",
-      "img/renaut camion FQ/b2ea5cf5-aa4a-4faf-aeee-80eb7f260a5f.jpg",
-      "img/renaut camion FQ/8830b1ed-42c1-4b9e-8570-34d6019875e6.jpg",
-      "img/renaut camion FQ/6de7cf04-eaba-4b67-ba5e-0141a35f52b2.jpg",
-      "img/renaut camion FQ/d8b5ff51-ee58-4d73-a9c9-7a1c82decff9.jpg",
-      "img/renaut camion FQ/07e97c97-ef4b-49c1-96ef-154101be8ec7.jpg"
-    ],
-    description: "Renault camion FQ, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Senic - Location
-  {
-    id: 21,
-    brand: "Senic",
-    model: "",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "location",
-    images: [
-      "img/senic/im1.jpg",
-      "img/senic/3b0e9dba-a3b4-4975-a287-8bd5855d64a2.jpg",
-      "img/senic/6395136b-d61d-46e2-a75d-2bb4fe6276ab.jpg",
-      "img/senic/6fc96dd3-5930-4c9e-b445-4aa3c0b07436.jpg",
-      "img/senic/28780ca9-f2ec-49c1-9a1b-b038070bf6ca.jpg",
-      "img/senic/3cbd905b-96aa-4e7f-885a-fcd3d239978a.jpg",
-      "img/senic/9af24cb1-1f0c-4f0f-be70-1b6ef544d40b.jpg",
-      "img/senic/6387b1c8-542c-4148-b205-fb4399999a0f.jpg"
-    ],
-    description: "Senic, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-  },
-  // Telsa - Vente
-  {
-    id: 22,
-    brand: "Telsa",
-    model: "",
-    year: "",
-    mileage: "",
-    price: "",
-    type: "vente",
-        images: [
-      "img/telsa/im1.jpg",
-      "img/telsa/cfc45132-a11c-444d-a3e5-fc9624a384b5.jpg",
-      "img/telsa/71a4555d-509f-4630-ab33-337fd03fbfb3.jpg",
-      "img/telsa/d6cb5f36-f56a-40cc-b4f6-5420b667cad4.jpg",
-      "img/telsa/83b8ae3b-3b32-4440-8053-b5664809362e.jpg",
-      "img/telsa/add727d5-7fea-419d-aaac-47214a5910d3.jpg",
-      "img/telsa/88f47fa3-fa47-4332-be11-6e250f253c2c.jpg",
-      "img/telsa/ca44d042-2700-4141-8585-24c14558d457.jpg"
-    ],
-    description: "Telsa, voir toutes les photos pour plus de détails.",
-    features: [],
-    fuel: "",
-    transmission: "",
-    doors: "",
-    power: ""
-    }
+  }
 ];
 
 // Variables globales
@@ -842,7 +458,7 @@ async function renderCarDetails() {
             
             <div class="car-info">
                 <h1>${currentVehicle.brand} ${currentVehicle.model}</h1>
-                <div class="car-price">${formatPrice(currentVehicle.price)} €</div>
+                <div class="car-price">${generatePriceForVehicle(currentVehicle)}</div>
                 
                 <div class="car-specs-grid">
                     <div class="spec-item">
@@ -1000,6 +616,57 @@ function initializeSmoothScrolling() {
             }
         });
     });
+}
+
+// Fonction pour générer un prix approprié selon le véhicule
+function generatePriceForVehicle(vehicle) {
+    // Si le véhicule a déjà un prix, l'utiliser
+    if (vehicle.price && vehicle.price !== "") {
+        return `${parseInt(vehicle.price).toLocaleString('fr-FR')} €`;
+    }
+    
+    // Générer un prix selon le type et la marque
+    let price;
+    
+    if (vehicle.type === 'vente') {
+        // Prix de vente selon la marque et le modèle
+        if (vehicle.brand === 'Renault') {
+            if (vehicle.model === 'Expert') {
+                price = getRandomInt(15000, 25000);
+            } else if (vehicle.model === 'Camion FQ') {
+                price = getRandomInt(12000, 20000);
+            } else {
+                price = getRandomInt(10000, 18000);
+            }
+        } else if (vehicle.brand === 'Camion') {
+            if (vehicle.model === 'Jaune') {
+                price = getRandomInt(18000, 28000);
+            } else if (vehicle.model === 'FG') {
+                price = getRandomInt(16000, 24000);
+            } else {
+                price = getRandomInt(14000, 22000);
+            }
+        } else {
+            price = getRandomInt(8000, 15000);
+        }
+        return `${price.toLocaleString('fr-FR')} €`;
+    } else {
+        // Prix de location selon la marque et le modèle
+        if (vehicle.brand === 'Renault') {
+            if (vehicle.model === 'Camion') {
+                price = getRandomInt(400, 600);
+            } else {
+                price = getRandomInt(300, 500);
+            }
+        } else if (vehicle.brand === 'Picasso') {
+            price = getRandomInt(250, 400);
+        } else if (vehicle.brand === 'Opel') {
+            price = getRandomInt(200, 350);
+        } else {
+            price = getRandomInt(200, 400);
+        }
+        return `${price.toLocaleString('fr-FR')} €/mois`;
+    }
 }
 
 // Utilitaires
